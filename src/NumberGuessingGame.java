@@ -31,6 +31,7 @@ public class NumberGuessingGame {
 
             System.out.println("Attempts : " + count);
             if (count >= 7) {
+                System.out.println();
                 System.out.println("❌ GAME OVER!\n" +
                         "The secret number was " + number);
                 break;
@@ -66,6 +67,7 @@ public class NumberGuessingGame {
 
             System.out.println("Attempts : " + count);
             if (count >= 10) {
+                System.out.println();
                 System.out.println("❌ GAME OVER!\n" +
                         "The secret number was " + number);
                 break;
@@ -101,6 +103,7 @@ public class NumberGuessingGame {
 
             System.out.println("Attempts : " + count);
             if (count >= 8) {
+                System.out.println();
                 System.out.println("❌ GAME OVER!\n" +
                         "The secret number was " + number);
                 break;
@@ -108,27 +111,41 @@ public class NumberGuessingGame {
         }
     }
 
+
     public static void main(String[] args) {
-        System.out.println("CHOOSE DIFFICULTY : ");
-        System.out.println("1. EASY ");
-        System.out.println("2. MEDIUM");
-        System.out.println("3. HARD");
-        System.out.println();
-        System.out.print("ENTER CHOICE : ");
-        int choice = sc.nextInt();
-        System.out.println();
-        switch (choice) {
-            case 1:
-                easy();
-                break;
-            case 2:
-                medium();
-                break;
-            case 3:
-                hard();
-                break;
-            default:
-                System.out.println("Invalid choice !!");
-        }
+        int playagain;
+        do {
+            System.out.println("CHOOSE DIFFICULTY : ");
+            System.out.println("1. EASY ");
+            System.out.println("2. MEDIUM");
+            System.out.println("3. HARD");
+            System.out.println();
+            System.out.print("ENTER CHOICE : ");
+            int choice = sc.nextInt();
+            System.out.println();
+            switch (choice) {
+                case 1:
+                    easy();
+                    break;
+                case 2:
+                    medium();
+                    break;
+                case 3:
+                    hard();
+                    break;
+                default:
+                    System.out.println("Invalid choice !!");
+
+            }
+            System.out.println();
+            System.out.println("Play_Again");
+            System.out.println("1.Yes");
+            System.out.println("2.No");
+            System.out.print("enter choice : ");
+            playagain = sc.nextInt();
+
+        } while (playagain == 1);
+        System.out.println("Thanks for playing!");
     }
 }
+
